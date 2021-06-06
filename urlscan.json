@@ -1,0 +1,187 @@
+{
+   "name": "urlscan",
+   "author": "z1p",
+   "version": 0.1,
+   "categories": [],
+   "description": "",
+   "icon": null,
+   "requirements": {
+      "jimi_min_version": null,
+      "jimi_max_version": null,
+      "plugins": []
+   },
+   "collections": {},
+   "triggers": {},
+   "actions": {
+      "urlscanSubmitURL": {
+         "display_name": "urlscanSubmitURL",
+         "className": "_urlscanSubmitURL",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "url",
+               "schema_value": "url",
+               "type": "input",
+               "label": "url",
+               "description": ""
+            },
+            {
+               "schema_item": "visibility",
+               "schema_value": "visibility",
+               "type": "input",
+               "label": "visibility",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "urlscanGetResult": {
+         "display_name": "urlscanGetResult",
+         "className": "_urlscanGetResult",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "uuid",
+               "schema_value": "uuid",
+               "type": "input",
+               "label": "uuid",
+               "description": ""
+            },
+            {
+               "schema_item": "wait",
+               "schema_value": "wait",
+               "type": "checkbox",
+               "label": "wait",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "urlscanSearchScans": {
+         "display_name": "urlscanSearchScans",
+         "className": "_urlscanSearchScans",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "searchQuery",
+               "schema_value": "searchQuery",
+               "type": "input",
+               "label": "searchQuery",
+               "description": ""
+            },
+            {
+               "schema_item": "searchAfter",
+               "schema_value": "searchAfter",
+               "type": "input",
+               "label": "searchAfter",
+               "description": ""
+            },
+            {
+               "schema_item": "size",
+               "schema_value": "size",
+               "type": "input",
+               "label": "size",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      }
+   },
+   "settings": {}
+}
